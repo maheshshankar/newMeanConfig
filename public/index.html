@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.6/angular-material.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/angular-ui-notification/dist/angular-ui-notification.css">
+    <title>CHAT</title>
+    <style type="text/css">
+    [ng-cloak] {
+        display: none !important
+    }
+    </style>
+</head>
+
+<body ng-cloak>
+    <div class="container">
+        <div class="row">
+            <div ui-view></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="/lib/angular-storage/dist/angular-storage.min.js"></script>
+    <script type="text/javascript" src="/lib/angular-ui-notification/dist/angular-ui-notification.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/controllers/main-ctrl.js"></script>
+    <script type="text/javascript" src="./js/controllers/register-ctrl.js"></script>
+    <script type="text/javascript" src="./js/controllers/login-ctrl.js"></script>
+    <script type="text/javascript" src="./js/controllers/home-ctrl.js"></script>
+    <script type="text/javascript" src="./js/controllers/chat-ctrl.js"></script>
+    <script type="text/javascript" src="./js/services/token-service.js"></script>
+    <script type="text/javascript" src="./js/services/http-service.js"></script>
+    <script type="text/javascript" src="./js/services/constant-service.js"></script>
+    <script type="text/javascript" src="./js/services/api-interceptor-service.js"></script>
+    <script type="text/javascript" src="./js/services/check-allowed-states-service.js"></script>
+    <script type="text/javascript" src="./js/services/tabs-service.js"></script>
+    <script type="text/javascript" src="./js/services/auth-service.js"></script>
+    <script type="text/javascript" src="./js/filters/filter.js"></script>
+    <script type="text/javascript">
+        angular.bootstrap(document.documentElement,
+                         ['myApp'], { strictDi: true });
+    </script>
+</body>
+
+</html>

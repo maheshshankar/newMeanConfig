@@ -1,0 +1,12 @@
+<div class="col  col-md-10">
+    <!-- <h2 style="text-align: center;">Login Page</h2> -->
+    <form class="form-group" name="loginForm" ng-submit="$ctrl.userLogin()" novalidate>
+        <label>Username</label>
+        <input type="text" name="username" class="form-control" ng-model="$ctrl.user.name" placeholder="Enter username... " required>
+        <label>Password</label>
+        <input type="password" class="form-control" name="password" ng-model="$ctrl.user.password" placeholder="Enter Password..." required>
+        <button class="btn btn-success" style="margin-top: 20px;">
+        	<center>Submit</center>
+    	</button>
+    </form>
+</div>

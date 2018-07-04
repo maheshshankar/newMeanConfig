@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-10">
+        <form name="myForm" ng-submit="reg.signUp(myForm)" class="form-group" novalidate>
+            <div class="form-group" ng-class="{'has-error':!myForm.name.$valid && checkSubmit}">
+                <label for="name"><b>Name</b></label>
+                <input type="text" name="name" ng-model="reg.register.name" class="form-control" ng-minlength="3" ng-pattern="/^[a-z0-9]+$/" required>
+                <span style="color: red" ng-show="!myForm.name.$valid && reg.checkSubmit">Field is required</span>
+            </div>
+            <div class="form-group">
+                <label for="email"><b>Email</b></label>
+                <input type="email" name="email" ng-model="reg.register.email" class="form-control" ng-pattern="/^[a-z0-9]{3,}@[0-9a-z]{3,}[.](com|in)$/" required>
+                <span style="color: red" ng-show="!myForm.email.$valid && reg.checkSubmit">Field is required</span>
+            </div>
+            <div class="form-group">
+                <label for="password"><b>Password</b></label>
+                <input type="text" name="password" ng-model="reg.register.password" class="form-control" ng-minlength="8" ng-pattern="/^[0-9a-zA-Z]+$/" required>
+                <span style="color: red" ng-show="!myForm.password.$valid && reg.checkSubmit">Field is required</span>
+            </div>
+            <div class="form-group">
+                <center><button class="btn btn-success">Submit</button></center>
+            </div>
+        </form>
+    </div>
+</div>
